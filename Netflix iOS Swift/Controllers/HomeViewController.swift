@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    private var headerView: HeroHeaderUIView?
     
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -24,7 +25,8 @@ class HomeViewController: UIViewController {
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
-        homeFeedTable.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        homeFeedTable.tableHeaderView = headerView
     }
     
     
