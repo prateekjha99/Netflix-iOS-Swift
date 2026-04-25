@@ -72,6 +72,7 @@ class HeroHeaderUIView: UIView {
         super.init(frame: frame)
         addSubview(heroImageView)
         heroImageView.frame = bounds
+        addGradient()
         addSubview(playButton)
         addSubview(downloadButton)
         applyConstraints()
