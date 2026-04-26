@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7F8C2BCA2F9DE57C002460A1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7F8C2BC92F9DE57C002460A1 /* SDWebImage */; };
+		7F8C2BCC2F9DE57C002460A1 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7F8C2BCB2F9DE57C002460A1 /* SDWebImageMapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7F8C2B782F9A07E9002460A1 /* Netflix iOS Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix iOS Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8C2BCC2F9DE57C002460A1 /* SDWebImageMapKit in Frameworks */,
+				7F8C2BCA2F9DE57C002460A1 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,8 @@
 			);
 			name = "Netflix iOS Swift";
 			packageProductDependencies = (
+				7F8C2BC92F9DE57C002460A1 /* SDWebImage */,
+				7F8C2BCB2F9DE57C002460A1 /* SDWebImageMapKit */,
 			);
 			productName = "Netflix iOS Swift";
 			productReference = 7F8C2B782F9A07E9002460A1 /* Netflix iOS Swift.app */;
@@ -107,6 +116,9 @@
 			);
 			mainGroup = 7F8C2B6F2F9A07E9002460A1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7F8C2BC82F9DE57C002460A1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7F8C2B792F9A07E9002460A1 /* Products */;
 			projectDirPath = "";
@@ -140,6 +152,8 @@
 /* Begin XCBuildConfiguration section */
 		7F8C2B8C2F9A07EB002460A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 7F8C2B7A2F9A07E9002460A1 /* Netflix iOS Swift */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -170,6 +184,8 @@
 		};
 		7F8C2B8D2F9A07EB002460A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 7F8C2B7A2F9A07E9002460A1 /* Netflix iOS Swift */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -200,6 +216,8 @@
 		};
 		7F8C2B8E2F9A07EB002460A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 7F8C2B7A2F9A07E9002460A1 /* Netflix iOS Swift */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -263,6 +281,8 @@
 		};
 		7F8C2B8F2F9A07EB002460A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 7F8C2B7A2F9A07E9002460A1 /* Netflix iOS Swift */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -339,6 +359,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7F8C2BC82F9DE57C002460A1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7F8C2BC92F9DE57C002460A1 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F8C2BC82F9DE57C002460A1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		7F8C2BCB2F9DE57C002460A1 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F8C2BC82F9DE57C002460A1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F8C2B702F9A07E9002460A1 /* Project object */;
 }
