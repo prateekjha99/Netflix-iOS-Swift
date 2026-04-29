@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import WebKit
+import YouTubeiOSPlayerHelper
 
 class TitlePreviewViewController: UIViewController {
     
@@ -42,37 +42,35 @@ class TitlePreviewViewController: UIViewController {
         return button
     }()
     
-    private let webView: WKWebView = {
-        let webView = WKWebView()
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        return webView
+    private let playerView: YTPlayerView = {
+        let player = YTPlayerView()
+        player.translatesAutoresizingMaskIntoConstraints = false
+        return player
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        view.addSubview(webView)
+        view.addSubview(playerView)
         view.addSubview(titleLabel)
         view.addSubview(overviewLabel)
         view.addSubview(downloadButton)
-        
+
         configureConstraints()
-        
-        
     }
     
 
     
     func configureConstraints() {
-        let webViewConstraints = [
-            webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
-            webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            webView.heightAnchor.constraint(equalToConstant: 300)
+        let playerViewConstraints = [
+            playerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            playerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            playerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            playerView.heightAnchor.constraint(equalToConstant: 300)
         ]
-        
+
         let titleLabelConstraints = [
-            titleLabel.topAnchor.constraint(equalTo: webView.bottomAnchor, constant: 20),
+            titleLabel.topAnchor.constraint(equalTo: playerView.bottomAnchor, constant: 20),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
         ]
         
@@ -89,7 +87,7 @@ class TitlePreviewViewController: UIViewController {
             downloadButton.heightAnchor.constraint(equalToConstant: 40)
         ]
         
-        NSLayoutConstraint.activate(webViewConstraints)
+        NSLayoutConstraint.activate(playerViewConstraints)
         NSLayoutConstraint.activate(titleLabelConstraints)
         NSLayoutConstraint.activate(overviewLabelConstraints)
         NSLayoutConstraint.activate(downloadButtonConstraints)
@@ -100,12 +98,8 @@ class TitlePreviewViewController: UIViewController {
     public func configure(with model: TitlePreviewViewModel) {
         titleLabel.text = model.title
         overviewLabel.text = model.titleOverview
-        
-        guard let url = URL(string: "https://www.youtube.com/embed/\(model.youtubeView.id.videoId)") else {
-            return
-        }
 
-        webView.load(URLRequest(url: url))
+        playerView.load(withVideoId: model.youtubeView.id.videoId, playerVars: ["playsinline": 1])
     }
 
 }

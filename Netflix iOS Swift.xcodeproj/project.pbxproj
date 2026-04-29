@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1B606D2FA1EFB900FBC1D8 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 7F1B606C2FA1EFB900FBC1D8 /* YouTubeiOSPlayerHelper */; };
 		7F8C2BCA2F9DE57C002460A1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7F8C2BC92F9DE57C002460A1 /* SDWebImage */; };
 		7F8C2BCC2F9DE57C002460A1 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7F8C2BCB2F9DE57C002460A1 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 			files = (
 				7F8C2BCC2F9DE57C002460A1 /* SDWebImageMapKit in Frameworks */,
 				7F8C2BCA2F9DE57C002460A1 /* SDWebImage in Frameworks */,
+				7F1B606D2FA1EFB900FBC1D8 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +89,7 @@
 			packageProductDependencies = (
 				7F8C2BC92F9DE57C002460A1 /* SDWebImage */,
 				7F8C2BCB2F9DE57C002460A1 /* SDWebImageMapKit */,
+				7F1B606C2FA1EFB900FBC1D8 /* YouTubeiOSPlayerHelper */,
 			);
 			productName = "Netflix iOS Swift";
 			productReference = 7F8C2B782F9A07E9002460A1 /* Netflix iOS Swift.app */;
@@ -118,6 +121,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				7F8C2BC82F9DE57C002460A1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				7F1B606B2FA1EFB900FBC1D8 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7F8C2B792F9A07E9002460A1 /* Products */;
@@ -361,6 +365,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7F1B606B2FA1EFB900FBC1D8 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
 		7F8C2BC82F9DE57C002460A1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
@@ -372,6 +384,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7F1B606C2FA1EFB900FBC1D8 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F1B606B2FA1EFB900FBC1D8 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
 		7F8C2BC92F9DE57C002460A1 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7F8C2BC82F9DE57C002460A1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
